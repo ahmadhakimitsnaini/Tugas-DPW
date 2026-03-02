@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Div dan Span - Image Map</title>
+    <link rel="icon" type="image/png" href="gambar/icon.png" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h1>Judul/Header Website</h1>
+    </div>
+
+    <div id="main">
+      <div id="link">
+        <ul>
+          <li><a href="#">London</a></li>
+          <li><a href="#">Paris</a></li>
+          <li><a href="#">Tokyo</a></li>
+        </ul>
+      </div>
+
+      <div id="content">
+        <h2>Uji Coba Image Map</h2>
+
+        <img
+          src="..//Modul-1/asset/Politeknik_Negeri_Madiun.png"
+          alt="Workplace"
+          usemap="#petagambar"
+        />
+
+        <map name="petagambar">
+          <area
+            shape="rect"
+            coords="34,44,278,350"
+            alt="Computer"
+            href="https://en.wikipedia.org/wiki/Computer"
+            target="_blank"
+          />
+          <area
+            shape="rect"
+            coords="290,172,333,258"
+            alt="Phone"
+            href="https://en.wikipedia.org/wiki/Telephone"
+            target="_blank"
+          />
+          <area
+            shape="circle"
+            coords="337,300,44"
+            alt="Coffee"
+            href="https://en.wikipedia.org/wiki/Coffee"
+            target="_blank"
+          />
+        </map>
+
+        <br /><br />
+        <p>
+          <b>Penjelasan Materi:</b> Tag HTML
+          <code>&lt;map&gt;</code> mendefinisikan peta gambar[cite: 586]. Peta
+          gambar adalah gambar dengan area spesifik yang dapat diklik[cite:
+          586]. Area tersebut ditentukan dengan satu atau lebih tag
+          <code>&lt;area&gt;</code> dengan mendefinisikan bentuk (shape) dan
+          koordinatnya (coords)[cite: 587].
+        </p>
+
+        <p>
+          <i
+            >Kesimpulan Uji Coba: Pada gambar di atas, jika kita mengarahkan
+            kursor dan mengklik area gambar komputer, ponsel, atau cangkir kopi,
+            kita akan diarahkan ke halaman Wikipedia yang berbeda-beda sesuai
+            dengan koordinat yang telah dipetakan.</i
+          >
+        </p>
+      </div>
+    </div>
+
+    <div id="footer">
+      <i>copyright@AhmadHakimItsnaini_253307054_2026</i>
+    </div>
+  </body>
+</html>
