@@ -2,10 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Sederhana</title>
+    <link rel="icon" type="image/png" href="gambar/icon.png" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+
+    <form action="/action_page.php" method="get" target="_blank">
+        <label for="depan">Nama depan: </label><br>
+        <input type="text" id="depan" name="i_name" value="Ahmad"><br>
+        <label for="n_belakang">Nama Belakang:</label><br>
+        <input type="text" id="n_belakang" name="i_belakang" value="Itsnaini"><br><br>
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+
+    <p>Jika Anda mengklik tombol "Kirim", data formulir akan dikirim ke halaman bernama "/action_page.php"[cite: 364, 366].</p>
+
+    <hr>
     
+    <h3>Kesimpulan Uji Coba:</h3>
+    <p>
+        Berdasarkan skenario uji coba yang dilakukan, dapat ditarik kesimpulan sebagai berikut: <br>
+        1. <b>Tombol Reset:</b> Ketika data diubah dan tombol "Reset" ditekan, formulir akan kembali ke nilai bawaan (default) yang telah ditetapkan pada atribut `value` (yaitu "Budi" dan "Prawira"). <br>
+        2. <b>Tombol Kirim (Submit):</b> Berfungsi mengeksekusi pengiriman data ke rute yang dituliskan pada atribut `action` (yaitu "/action_page.php"). <br>
+        3. <b>Atribut Target:</b> Jika ditambahkan `target="_blank"`, proses pengiriman form akan membuka tab baru di browser. Jika menggunakan `target="_self"` (atau dikosongkan), proses pengiriman akan memuat di tab yang sama. <br>
+        4. <b>Atribut Method:</b> Menggunakan `method="get"` akan membuat data isian form (seperti nama Budi Prawira) terlihat pada URL bar setelah dikirim. Jika diubah menjadi `method="post"`, data tersebut akan dikirim secara tersembunyi di belakang layar (HTTP body), sehingga lebih aman dan URL terlihat lebih bersih.
+    </p>
+
 </body>
 </html>
