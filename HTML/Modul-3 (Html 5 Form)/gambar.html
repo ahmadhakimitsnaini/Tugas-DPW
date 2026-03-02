@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Halaman Gambar</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ahmad Hakim Itsnaini" />
+    <meta name="nim" content="253307054" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      header {
+        background-color: #666;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+      }
+      nav {
+        float: left;
+        width: 30%;
+        height: 300px; /* only for demonstration, should be removed */
+        background: #ccc;
+        padding: 20px;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      article {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+        /* height dihapus atau diset auto agar bisa menyesuaikan panjang gambar galeri */
+        min-height: 300px;
+      }
+      section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      @media (max-width: 600px) {
+        nav,
+        article {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Judul Website</h2>
+    </header>
+
+    <section>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gambar.html">Gambar</a></li>
+          <li><a href="event.html">Event</a></li>
+          <li><a href="audio.html">Audio</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="svg.html">SVG</a></li>
+          <li><a href="canvas.html">Canvas</a></li>
+        </ul>
+      </nav>
+
+      <article>
+        <h1>Gambar Random</h1>
+
+        <div>
+          <img
+            src="../Modul-1/asset/_ (12).jpeg"
+            alt="Pemandangan 1"
+            style="width: 30%; margin: 1.5%; border-radius: 5px"
+          />
+          <img
+            src="..//Modul-1/asset/_ (13).jpeg"
+            alt="Pemandangan 2"
+            style="width: 30%; margin: 1.5%; border-radius: 5px"
+          />
+          <img
+            src="..//Modul-1/asset/_ (14).jpeg"
+            alt="Pemandangan 3"
+            style="width: 30%; margin: 1.5%; border-radius: 5px"
+          />
+          <img
+            src="..//Modul-1/asset/_ (15).jpeg"
+            alt="Pemandangan 4"
+            style="width: 30%; margin: 1.5%; border-radius: 5px"
+          />
+          <img
+            src="..//Modul-1/asset/mmm.jpeg"
+            alt="Pemandangan 5"
+            style="width: 30%; margin: 1.5%; border-radius: 5px"
+          />
+          <img
+            src="..//Modul-1/asset/Politeknik_Negeri_Madiun.png"
+            alt="Pemandangan 6"
+            style="width: 30%; margin: 1.5%; border-radius: 5px"
+          />
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <p>Footer - Ahmad Hakim Itsnaini &copy; 2026</p>
+    </footer>
+  </body>
+</html>

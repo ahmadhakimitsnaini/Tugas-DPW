@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Halaman Event</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ahmad Hakim Itsnaini" />
+    <meta name="nim" content="253307054" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      header {
+        background-color: #666;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+      }
+      nav {
+        float: left;
+        width: 30%;
+        height: 300px;
+        background: #ccc;
+        padding: 20px;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      article {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+        min-height: 300px;
+      }
+      section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      @media (max-width: 600px) {
+        nav,
+        article {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Judul Website</h2>
+    </header>
+
+    <section>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gambar.html">Gambar</a></li>
+          <li><a href="event.html">Event</a></li>
+          <li><a href="audio.html">Audio</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="svg.html">SVG</a></li>
+          <li><a href="canvas.html">Canvas</a></li>
+        </ul>
+      </nav>
+
+      <article>
+        <h1>Uji Coba Mouse Event pada Gambar</h1>
+        <p>
+          Cobalah berinteraksi dengan 3 gambar pertama di bawah ini (arahkan
+          kursor, klik, atau klik ganda):
+        </p>
+
+        <div>
+          <img
+            src="./asset/image/1.jpeg"
+            alt="Pemandangan 1"
+            style="
+              width: 30%;
+              margin: 1.5%;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+            onmouseover="this.style.opacity = '0.5'"
+            onmouseout="this.style.opacity = '1'"
+          />
+
+          <img
+            src="./asset/image/2.jpeg"
+            alt="Pemandangan 2"
+            style="
+              width: 30%;
+              margin: 1.5%;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+            onclick="
+              alert('Halo! Kamu baru saja mengklik gambar pemandangan kedua.')
+            "
+          />
+
+          <img
+            src="./asset/image/3.jpeg"
+            alt="Pemandangan 3"
+            style="
+              width: 30%;
+              margin: 1.5%;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+            ondblclick="this.style.border = '5px solid red'"
+          />
+
+          <img
+            src="./asset/image/4.jpeg"
+            alt="Pemandangan 4"
+            style="width: 30%; margin: 1.5%; border-radius: 5px"
+          />
+          <img
+            src="./asset/image/5.jpeg"
+            alt="Pemandangan 5"
+            style="width: 30%; margin: 1.5%; border-radius: 5px"
+          />
+          <img
+            src="./asset/image/6.jpeg"
+            alt="Pemandangan 6"
+            style="width: 30%; margin: 1.5%; border-radius: 5px"
+          />
+        </div>
+
+        <p>
+          <b>Kesimpulan Ujicoba:</b><br />
+          Dengan menambahkan atribut <i>Mouse Event</i> pada elemen HTML, kita
+          dapat menangkap aktivitas mouse pengguna (seperti <i>hover</i>,
+          <i>click</i>, atau <i>double click</i>). Hal ini membuat halaman web
+          yang statis menjadi lebih dinamis dan interaktif tanpa perlu membuat
+          file JavaScript eksternal yang terpisah.
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      <p>Footer - Ahmad Hakim Itsnaini &copy; 2026</p>
+    </footer>
+  </body>
+</html>

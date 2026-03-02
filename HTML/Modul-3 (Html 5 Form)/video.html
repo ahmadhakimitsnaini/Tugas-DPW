@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Halaman Video</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ahmad Hakim Itsnaini" />
+    <meta name="nim" content="253307054" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      header {
+        background-color: #666;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+      }
+      nav {
+        float: left;
+        width: 30%;
+        height: 300px;
+        background: #ccc;
+        padding: 20px;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      article {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+        min-height: 300px;
+      }
+      section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      @media (max-width: 600px) {
+        nav,
+        article {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Judul Website</h2>
+    </header>
+
+    <section>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gambar.html">Gambar</a></li>
+          <li><a href="event.html">Event</a></li>
+          <li><a href="audio.html">Audio</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="svg.html">SVG</a></li>
+          <li><a href="canvas.html">Canvas</a></li>
+        </ul>
+      </nav>
+
+      <article>
+        <h1>Pemutar Video HTML5</h1>
+
+        <h3>1. Video Lokal (File .mp4)</h3>
+        <video width="420" height="315" controls autoplay muted>
+          <source src="./asset/vidio/volly.mp4" type="video/mp4" />
+          Browser tidak mendukung pemutar video.
+        </video>
+
+        <h3>2. Video Eksternal (YouTube Iframe)</h3>
+        <iframe
+          width="420"
+          height="315"
+          src="https://www.youtube.com/embed/fn3KWM1kuAw"
+          frameborder="0"
+          allowfullscreen
+        >
+        </iframe>
+
+        <p>
+          <b>Kesimpulan Ujicoba:</b><br />
+          Tag <code>&lt;video&gt;</code> digunakan untuk memutar berkas video
+          secara langsung dari penyimpanan lokal. Atribut
+          <code>controls</code> menampilkan tombol *play/pause* dan volume.
+          Ketika atribut <code>autoplay</code> dan
+          <code>muted</code> ditambahkan, video akan langsung berputar secara
+          otomatis saat halaman dimuat, namun dalam kondisi tanpa suara
+          (bisukan). *Browser* modern memang mewajibkan atribut
+          <code>muted</code> agar <code>autoplay</code> bisa berfungsi untuk
+          mencegah gangguan suara tiba-tiba bagi pengguna. Sementara itu, tag
+          <code>&lt;iframe&gt;</code> sangat efektif untuk menyematkan
+          (<i>embed</i>) konten video dari platform pihak ketiga seperti YouTube
+          tanpa harus membebani penyimpanan *server* lokal kita sendiri.
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      <p>Footer - Ahmad Hakim Itsnaini &copy; 2026</p>
+    </footer>
+  </body>
+</html>
