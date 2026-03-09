@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Galeri Foto Flexbox</title>
+    <style>
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap; /* Mengizinkan foto turun ke baris bawah */
+            gap: 15px; /* Memberi jarak antar foto */
+            justify-content: center; /* Menengahkan sisa foto di baris terakhir */
+            padding: 20px;
+        }
+
+        .gallery-item {
+            /* Lebar diatur 25% (4 kolom) dikurangi ukuran gap agar pas */
+            width: calc(25% - 15px);
+            background-color: #f0f0f0;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        /* Memastikan gambar tidak melebihi kotak */
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align:center;">Galeri Foto (18 Item, 4 Kolom)</h2>
+
+    <div class="gallery-container">
+        <div class="gallery-item"><img src="image/foto1.jpg" alt="Foto 1"><p>Foto 1</p></div>
+        <div class="gallery-item"><img src="image/foto2.jpg" alt="Foto 2"><p>Foto 2</p></div>
+        <div class="gallery-item"><img src="image/foto3.jpg" alt="Foto 3"><p>Foto 3</p></div>
+        <div class="gallery-item"><img src="image/foto4.jpg" alt="Foto 4"><p>Foto 4</p></div>
+        <div class="gallery-item"><img src="image/foto5.jpg" alt="Foto 5"><p>Foto 5</p></div>
+        <div class="gallery-item"><img src="image/foto6.jpg" alt="Foto 6"><p>Foto 6</p></div>
+        <div class="gallery-item"><img src="image/foto7.jpg" alt="Foto 7"><p>Foto 7</p></div>
+        <div class="gallery-item"><img src="image/foto8.jpg" alt="Foto 8"><p>Foto 8</p></div>
+        <div class="gallery-item"><img src="image/foto9.jpg" alt="Foto 9"><p>Foto 9</p></div>
+        <div class="gallery-item"><img src="image/foto10.jpg" alt="Foto 10"><p>Foto 10</p></div>
+        <div class="gallery-item"><img src="image/foto11.jpg" alt="Foto 11"><p>Foto 11</p></div>
+        <div class="gallery-item"><img src="image/foto12.jpg" alt="Foto 12"><p>Foto 12</p></div>
+        <div class="gallery-item"><img src="image/foto13.jpg" alt="Foto 13"><p>Foto 13</p></div>
+        <div class="gallery-item"><img src="image/foto14.jpg" alt="Foto 14"><p>Foto 14</p></div>
+        <div class="gallery-item"><img src="image/foto15.jpg" alt="Foto 15"><p>Foto 15</p></div>
+        <div class="gallery-item"><img src="image/foto16.jpg" alt="Foto 16"><p>Foto 16</p></div>
+        <div class="gallery-item"><img src="image/foto17.jpg" alt="Foto 17"><p>Foto 17</p></div>
+        <div class="gallery-item"><img src="image/foto18.jpg" alt="Foto 18"><p>Foto 18</p></div>
+    </div>
+
+</body>
+</html>

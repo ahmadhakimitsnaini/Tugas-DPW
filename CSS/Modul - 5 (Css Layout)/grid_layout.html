@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Belajar CSS Grid box</title>
+    <style>
+        .tempat_grid {
+            /* Skenario 2: Ubah 'grid' menjadi 'inline-grid' untuk melihat perbedaannya */
+            display: grid; 
+            grid-template-columns: auto auto auto; /* Membuat 3 kolom otomatis */
+            background-color: #2196F3;
+            padding: 10px;
+            
+            /* Skenario 3 & 4: Pengaturan jarak (gap) antar grid */
+            /* grid-column-gap: 100px; */
+            /* grid-row-gap: 50px; */
+            grid-gap: 50px; /* Skenario 4: Penulisan singkat untuk row dan column gap */
+        }
+        
+        .item_grid {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        /* Pengaturan khusus teks kesimpulan agar rapi */
+        .kesimpulan {
+            font-size: 16px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tampilan: </h1>
+    <div class="tempat_grid">
+        <div class="item_grid">1</div>
+        <div class="item_grid">2</div>
+        <div class="item_grid">3</div>
+        <div class="item_grid">4</div>
+        <div class="item_grid">5</div>
+        <div class="item_grid">6</div>
+        <div class="item_grid">7</div>
+        <div class="item_grid">8</div>
+        <div class="item_grid">9</div>
+        
+        <div class="item_grid kesimpulan">
+            <strong>Kesimpulan Ujicoba Grid:</strong>
+            <ul>
+                <li><strong>Sekenario 1 & 2:</strong> <code>display: grid</code> membuat kotak memanjang penuh, sedangkan <code>inline-grid</code> membuat pembungkus hanya selebar konten di dalamnya.</li>
+                <li><strong>Sekenario 3:</strong> <code>grid-column-gap</code> memberi spasi horizontal, <code>grid-row-gap</code> memberi spasi vertikal.</li>
+                <li><strong>Sekenario 4:</strong> <code>grid-gap</code> adalah cara paling praktis untuk memberikan spasi seragam ke seluruh sisi item grid.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
