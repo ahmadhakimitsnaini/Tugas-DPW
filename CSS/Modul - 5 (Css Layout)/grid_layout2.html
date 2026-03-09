@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Grid Layout - Latihan 5</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-gap: 50px;
+            background-color: #2196F3;
+            padding: 10px;
+            
+            /* Skenario 2: Mengatur template kolom */
+            /* Coba ubah nilai ini menjadi 'auto auto', atau '70px 300px auto 40px', atau '10px 500px 20px 10px' sesuai instruksi modul */
+            grid-template-columns: auto auto auto auto; 
+        }
+        
+        .item1 {
+            /* Skenario 1: Mengatur bentangan kolom */
+            grid-column-start: 1;
+            grid-column-end: 3; 
+            
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        
+        .item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .kesimpulan {
+            background-color: #fff;
+            padding: 15px;
+            font-size: 16px;
+            grid-column: 1 / -1; /* Membentang penuh di bawah */
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        
+        <div class="kesimpulan">
+            <strong>Kesimpulan Lembar Kerja 5:</strong>
+            <ul>
+                <li><strong>Skenario 1:</strong> Penggunaan <code>grid-column-start: 1;</code> dan <code>grid-column-end: 3;</code> membuat item nomor 1 membentang atau menggabungkan sel (seperti <i>merge cell</i>) dari garis grid pertama hingga batas garis grid ketiga, sehingga ia memakan jatah dua kolom.</li>
+                <li><strong>Skenario 2:</strong> Properti <code>grid-template-columns</code> menentukan jumlah dan lebar kolom. Jika diisi <code>auto auto auto auto</code>, akan terbentuk 4 kolom berukuran sama. Jika diubah menjadi nilai piksel spesifik seperti <code>70px 300px auto 40px</code>, lebar masing-masing kolom akan kaku mengikuti angka piksel tersebut, sementara kolom dengan nilai <code>auto</code> akan mengisi sisa ruang yang ada.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
