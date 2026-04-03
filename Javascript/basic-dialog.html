@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Basic Dialog jQuery UI</title>
+    <!-- Memuat CSS jQuery UI -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <!-- Memuat jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Memuat JavaScript jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <button id="bukaDialog">Buka Dialog</button>
+
+    <div id="jendelaDialog" title="Pesan Sistem">
+      <p>
+        Ini adalah jendela basic dialog yang dibuat menggunakan jQuery UI. Anda
+        bisa menggeser atau menutupnya.
+      </p>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        // Inisialisasi dialog namun sembunyikan di awal
+        $("#jendelaDialog").dialog({
+          autoOpen: false,
+        });
+
+        // Buka dialog saat tombol diklik
+        $("#bukaDialog").click(function () {
+          $("#jendelaDialog").dialog("open");
+        });
+      });
+    </script>
+  </body>
+</html>
