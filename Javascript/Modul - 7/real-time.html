@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Waktu Real-Time</title>
+    <style>
+      #jam {
+        font-size: 24px;
+        font-weight: bold;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Waktu Saat Ini:</h2>
+    <div id="jam">Memuat...</div>
+
+    <script>
+      function tampilkanWaktu() {
+        var waktuSaatIni = new Date();
+
+        var hari = waktuSaatIni.toLocaleDateString("id-ID", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+        var jam = waktuSaatIni.getHours().toString().padStart(2, "0");
+        var menit = waktuSaatIni.getMinutes().toString().padStart(2, "0");
+        var detik = waktuSaatIni.getSeconds().toString().padStart(2, "0");
+
+        var formatWaktu = hari + " | " + jam + ":" + menit + ":" + detik;
+
+        document.getElementById("jam").innerHTML = formatWaktu;
+      }
+
+      // Jalankan fungsi setiap 1 detik
+      setInterval(tampilkanWaktu, 1000);
+      // Panggil sekali agar tidak ada jeda 1 detik saat pertama kali dimuat
+      tampilkanWaktu();
+    </script>
+  </body>
+</html>

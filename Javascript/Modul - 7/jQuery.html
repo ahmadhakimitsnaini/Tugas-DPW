@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <button id="tombolSembunyi">Sembunyikan Teks</button>
+    <button id="tombolTampil">Tampilkan Teks</button>
+    <p id="teksContoh">
+      Ini adalah teks yang akan disembunyikan dan ditampilkan dengan jQuery.
+    </p>
+
+    <script>
+      $(document).ready(function () {
+        $("#tombolSembunyi").click(function () {
+          $("#teksContoh").slideUp();
+        });
+        $("#tombolTampil").click(function () {
+          $("#teksContoh").slideDown();
+        });
+      });
+    </script>
+  </body>
+</html>
