@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Progress Bar Dialog</title>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <style>
+      #nilaiProgress {
+        text-align: center;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="tombolDownload">Mulai Download File</button>
+
+    <div id="dialogDownload" title="Mengunduh File...">
+      <div id="progressbar"></div>
+      <div id="nilaiProgress">0%</div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        // Inisialisasi dialog
+        $("#dialogDownload").dialog({
+          autoOpen: false,
+          modal: true,
+          width: 400,
+        });
+
+        // Inisialisasi progress bar
+        $("#progressbar").progressbar({
+          value: 0,
+        });
+
+        $("#tombolDownload").click(function () {
+          $("#dialogDownload").dialog("open");
+
+          var nilai = 0;
+          // Simulasi proses download berjalan setiap 100ms
+          var proses = setInterval(function () {
+            nilai += 5; // Tambah 5% setiap interval
+
+            $("#progressbar").progressbar("value", nilai);
+            $("#nilaiProgress").text(nilai + "%");
+
+            if (nilai >= 100) {
+              clearInterval(proses);
+              $("#nilaiProgress").text("Unduhan Selesai!");
+              setTimeout(function () {
+                $("#dialogDownload").dialog("close");
+                $("#progressbar").progressbar("value", 0); // Reset
+                $("#nilaiProgress").text("0%");
+              }, 2000); // Tutup dialog setelah 2 detik selesai
+            }
+          }, 100);
+        });
+      });
+    </script>
+  </body>
+</html>
