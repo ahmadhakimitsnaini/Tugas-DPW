@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Menu jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      ul {
+        list-style-type: none;
+        padding: 0;
+        width: 200px;
+      }
+      li {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        border-bottom: 1px solid #444;
+        cursor: pointer;
+      }
+      .submenu {
+        display: none;
+        background-color: #555;
+      }
+      .submenu li {
+        padding-left: 20px;
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Beranda</li>
+      <li class="menu-utama">
+        Layanan (Klik Saya)
+        <ul class="submenu">
+          <li>Web Development</li>
+          <li>UI/UX Design</li>
+          <li>SEO Optimization</li>
+        </ul>
+      </li>
+      <li>Kontak</li>
+    </ul>
+
+    <script>
+      $(document).ready(function () {
+        $(".menu-utama").click(function () {
+          // Menggunakan slideToggle untuk membuka/menutup submenu
+          $(this).children(".submenu").slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>
