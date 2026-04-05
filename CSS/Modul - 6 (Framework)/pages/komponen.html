@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Tutorial - Komponen</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .page-header {
+        background: linear-gradient(135deg, #6f42c1 0%, #d63384 100%);
+      }
+      .component-card {
+        border-left: 4px solid #6f42c1;
+      }
+      .code-preview {
+        background: #1e1e2e;
+        border-radius: 8px;
+      }
+      .watermark {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(111, 66, 193, 0.9);
+        color: white;
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        z-index: 9999;
+      }
+      .nav-pills .nav-link.active {
+        background-color: #6f42c1;
+      }
+      .nav-pills .nav-link {
+        color: #6f42c1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+          <i class="bi bi-bootstrap-fill text-primary me-2"></i
+          >BootstrapTutorial
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tentang.html">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="komponen.html">Komponen</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeri.html">Galeri</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kontak.html">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="page-header text-white py-5">
+      <div class="container text-center py-3">
+        <i class="bi bi-grid-3x3-gap-fill fs-1 mb-3 d-block"></i>
+        <h1 class="fw-bold display-5">Komponen Bootstrap</h1>
+        <p class="lead opacity-90">
+          Eksplorasi berbagai komponen siap pakai dari Bootstrap 5
+        </p>
+      </div>
+    </section>
+
+    <!-- TAB NAVIGATION -->
+    <section class="py-5">
+      <div class="container">
+        <ul
+          class="nav nav-pills justify-content-center mb-5 flex-wrap gap-2"
+          id="kompTab"
+        >
+          <li class="nav-item">
+            <button
+              class="nav-link active"
+              data-bs-toggle="pill"
+              data-bs-target="#tab-buttons"
+            >
+              <i class="bi bi-hand-index me-1"></i>Buttons
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link"
+              data-bs-toggle="pill"
+              data-bs-target="#tab-alerts"
+            >
+              <i class="bi bi-exclamation-triangle me-1"></i>Alerts
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link"
+              data-bs-toggle="pill"
+              data-bs-target="#tab-cards"
+            >
+              <i class="bi bi-card-text me-1"></i>Cards
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link"
+              data-bs-toggle="pill"
+              data-bs-target="#tab-badges"
+            >
+              <i class="bi bi-tag me-1"></i>Badges & Progress
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link"
+              data-bs-toggle="pill"
+              data-bs-target="#tab-modal"
+            >
+              <i class="bi bi-window me-1"></i>Modal & Toast
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link"
+              data-bs-toggle="pill"
+              data-bs-target="#tab-forms"
+            >
+              <i class="bi bi-input-cursor-text me-1"></i>Forms
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <!-- BUTTONS -->
+          <div class="tab-pane fade show active" id="tab-buttons">
+            <div class="card component-card shadow-sm p-4 mb-4">
+              <h5 class="fw-bold mb-3">
+                <i class="bi bi-hand-index text-purple me-2"></i>Tombol Solid
+                (Filled)
+              </h5>
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <button class="btn btn-primary">Primary</button>
+                <button class="btn btn-secondary">Secondary</button>
+                <button class="btn btn-success">Success</button>
+                <button class="btn btn-danger">Danger</button>
+                <button class="btn btn-warning text-dark">Warning</button>
+                <button class="btn btn-info text-white">Info</button>
+                <button class="btn btn-dark">Dark</button>
+                <button class="btn btn-light border">Light</button>
+              </div>
+              <h5 class="fw-bold mb-3">Tombol Outline</h5>
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <button class="btn btn-outline-primary">Primary</button>
+                <button class="btn btn-outline-secondary">Secondary</button>
+                <button class="btn btn-outline-success">Success</button>
+                <button class="btn btn-outline-danger">Danger</button>
+                <button class="btn btn-outline-warning">Warning</button>
+                <button class="btn btn-outline-info">Info</button>
+              </div>
+              <h5 class="fw-bold mb-3">Ukuran Tombol</h5>
+              <div class="d-flex flex-wrap align-items-center gap-2 mb-4">
+                <button class="btn btn-primary btn-lg">Large</button>
+                <button class="btn btn-primary">Default</button>
+                <button class="btn btn-primary btn-sm">Small</button>
+              </div>
+              <h5 class="fw-bold mb-3">Tombol dengan Icon</h5>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-primary">
+                  <i class="bi bi-download me-1"></i>Download
+                </button>
+                <button class="btn btn-success">
+                  <i class="bi bi-check-circle me-1"></i>Simpan
+                </button>
+                <button class="btn btn-danger">
+                  <i class="bi bi-trash me-1"></i>Hapus
+                </button>
+                <button class="btn btn-outline-dark">
+                  <i class="bi bi-share me-1"></i>Bagikan
+                </button>
+                <button class="btn btn-warning text-dark" disabled>
+                  <i class="bi bi-lock me-1"></i>Disabled
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ALERTS -->
+          <div class="tab-pane fade" id="tab-alerts">
+            <div class="card component-card shadow-sm p-4 mb-4">
+              <h5 class="fw-bold mb-4">
+                <i class="bi bi-exclamation-triangle me-2"></i>Alert /
+                Peringatan
+              </h5>
+              <div class="alert alert-primary" role="alert">
+                <i class="bi bi-info-circle-fill me-2"></i>
+                <strong>Info!</strong> Ini adalah alert berwarna primary (biru).
+              </div>
+              <div
+                class="alert alert-success alert-dismissible fade show"
+                role="alert"
+              >
+                <i class="bi bi-check-circle-fill me-2"></i>
+                <strong>Berhasil!</strong> Data Anda berhasil disimpan. Alert
+                ini bisa ditutup.
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                ></button>
+              </div>
+              <div class="alert alert-warning" role="alert">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                <strong>Perhatian!</strong> Pastikan data yang dimasukkan sudah
+                benar.
+              </div>
+              <div class="alert alert-danger" role="alert">
+                <i class="bi bi-x-circle-fill me-2"></i>
+                <strong>Error!</strong> Terjadi kesalahan saat memproses
+                permintaan Anda.
+              </div>
+              <div class="alert alert-dark" role="alert">
+                <i class="bi bi-gear-fill me-2"></i>
+                Alert dark untuk pesan sistem atau teknis.
+              </div>
+            </div>
+          </div>
+
+          <!-- CARDS -->
+          <div class="tab-pane fade" id="tab-cards">
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                  <div class="card-header bg-primary text-white fw-bold">
+                    Card dengan Header
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Judul Card</h5>
+                    <p class="card-text text-muted">
+                      Ini adalah contoh konten card standar Bootstrap dengan
+                      header berwarna.
+                    </p>
+                  </div>
+                  <div class="card-footer text-muted small">
+                    Terakhir diupdate: hari ini
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-success">
+                  <div class="card-body text-center">
+                    <i
+                      class="bi bi-person-circle fs-1 text-success mb-3 d-block"
+                    ></i>
+                    <h5 class="card-title fw-bold">Profil Pengguna</h5>
+                    <p class="card-text text-muted">
+                      Card dengan ikon dan tombol aksi.
+                    </p>
+                    <a href="#" class="btn btn-success btn-sm">Lihat Profil</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100 bg-dark text-white shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title">Card Gelap</h5>
+                    <p class="card-text opacity-75">
+                      Card dengan latar belakang gelap menggunakan class bg-dark
+                      dan text-white.
+                    </p>
+                    <a href="#" class="btn btn-outline-light btn-sm"
+                      >Selengkapnya</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BADGES & PROGRESS -->
+          <div class="tab-pane fade" id="tab-badges">
+            <div class="card component-card shadow-sm p-4 mb-4">
+              <h5 class="fw-bold mb-3">Badge / Label</h5>
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <span class="badge bg-primary fs-6">Primary</span>
+                <span class="badge bg-secondary fs-6">Secondary</span>
+                <span class="badge bg-success fs-6">Success</span>
+                <span class="badge bg-danger fs-6">Danger</span>
+                <span class="badge bg-warning text-dark fs-6">Warning</span>
+                <span class="badge bg-info text-white fs-6">Info</span>
+                <span class="badge bg-dark fs-6">Dark</span>
+                <span class="badge rounded-pill bg-primary fs-6"
+                  >Pill Badge</span
+                >
+              </div>
+              <h5 class="fw-bold mb-3">Progress Bar</h5>
+              <div class="mb-3">
+                <label class="form-label small text-muted">HTML (25%)</label>
+                <div class="progress">
+                  <div class="progress-bar bg-danger" style="width: 25%">
+                    25%
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label small text-muted">CSS (60%)</label>
+                <div class="progress">
+                  <div class="progress-bar bg-warning" style="width: 60%">
+                    60%
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label small text-muted"
+                  >Bootstrap (80%)</label
+                >
+                <div class="progress">
+                  <div class="progress-bar bg-success" style="width: 80%">
+                    80%
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label small text-muted"
+                  >JavaScript (45%) — Animated</label
+                >
+                <div class="progress">
+                  <div
+                    class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+                    style="width: 45%"
+                  >
+                    45%
+                  </div>
+                </div>
+              </div>
+              <h5 class="fw-bold mb-3 mt-4">Spinner (Loading)</h5>
+              <div class="d-flex gap-3 align-items-center flex-wrap">
+                <div class="spinner-border text-primary"></div>
+                <div class="spinner-border text-success"></div>
+                <div class="spinner-border text-danger"></div>
+                <div class="spinner-grow text-warning"></div>
+                <div class="spinner-grow text-info"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MODAL & TOAST -->
+          <div class="tab-pane fade" id="tab-modal">
+            <div class="card component-card shadow-sm p-4 mb-4">
+              <h5 class="fw-bold mb-3">Modal Dialog</h5>
+              <p class="text-muted small mb-3">
+                Klik tombol di bawah untuk membuka modal:
+              </p>
+              <div class="d-flex flex-wrap gap-2 mb-5">
+                <button
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalContoh"
+                >
+                  <i class="bi bi-window me-1"></i>Buka Modal
+                </button>
+                <button
+                  class="btn btn-danger"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalKonfirmasi"
+                >
+                  <i class="bi bi-trash me-1"></i>Konfirmasi Hapus
+                </button>
+              </div>
+
+              <h5 class="fw-bold mb-3">Toast Notification</h5>
+              <button class="btn btn-success" onclick="showToast()">
+                <i class="bi bi-bell me-1"></i>Tampilkan Toast
+              </button>
+            </div>
+          </div>
+
+          <!-- FORMS -->
+          <div class="tab-pane fade" id="tab-forms">
+            <div class="card component-card shadow-sm p-4">
+              <h5 class="fw-bold mb-4">Komponen Form Bootstrap</h5>
+              <form>
+                <div class="mb-3">
+                  <label class="form-label fw-semibold">Input Teks Biasa</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Masukkan nama lengkap..."
+                  />
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label class="form-label fw-semibold">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="email@contoh.com"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label fw-semibold">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="••••••••"
+                    />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-semibold">Pilih Framework</label>
+                  <select class="form-select">
+                    <option selected>-- Pilih Framework CSS --</option>
+                    <option>Bootstrap</option>
+                    <option>Tailwind CSS</option>
+                    <option>Bulma</option>
+                    <option>Foundation</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-semibold">Pesan</label>
+                  <textarea
+                    class="form-control"
+                    rows="3"
+                    placeholder="Tulis pesan Anda..."
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-semibold d-block"
+                    >Jenis Kelamin</label
+                  >
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gender"
+                      id="laki"
+                    />
+                    <label class="form-check-label" for="laki">Laki-laki</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gender"
+                      id="perempuan"
+                    />
+                    <label class="form-check-label" for="perempuan"
+                      >Perempuan</label
+                    >
+                  </div>
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="setuju" />
+                  <label class="form-check-label" for="setuju"
+                    >Saya menyetujui syarat dan ketentuan</label
+                  >
+                </div>
+                <div class="d-flex gap-2">
+                  <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-send me-1"></i>Kirim
+                  </button>
+                  <button type="reset" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-counterclockwise me-1"></i>Reset
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL CONTOH -->
+    <div class="modal fade" id="modalContoh" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">
+              <i class="bi bi-info-circle me-2"></i>Tentang Bootstrap
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Bootstrap adalah framework CSS open-source yang memudahkan
+              pengembangan website responsif dan modern.
+            </p>
+            <p class="mb-0 text-muted small">
+              Dibuat oleh Mark Otto dan Jacob Thornton dari Twitter pada tahun
+              2011.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              Tutup
+            </button>
+            <a
+              href="https://getbootstrap.com"
+              target="_blank"
+              class="btn btn-primary"
+              >Kunjungi Bootstrap</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL KONFIRMASI -->
+    <div class="modal fade" id="modalKonfirmasi" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-danger">
+              <i class="bi bi-exclamation-triangle-fill me-2"></i>Konfirmasi
+            </h5>
+          </div>
+          <div class="modal-body text-center pt-0">
+            <p>
+              Apakah Anda yakin ingin menghapus data ini? Tindakan ini tidak
+              dapat dibatalkan.
+            </p>
+          </div>
+          <div class="modal-footer border-0 justify-content-center">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              Batal
+            </button>
+            <button class="btn btn-danger" data-bs-dismiss="modal">
+              Ya, Hapus
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST -->
+    <div
+      class="toast-container position-fixed bottom-0 end-0 p-3"
+      style="z-index: 10000"
+    >
+      <div
+        id="myToast"
+        class="toast align-items-center text-white bg-success border-0"
+        role="alert"
+      >
+        <div class="d-flex">
+          <div class="toast-body">
+            <i class="bi bi-check-circle me-2"></i
+            ><strong>Berhasil!</strong> Data telah disimpan.
+          </div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark py-4 text-white">
+      <div class="container text-center">
+        <p class="mb-1 fw-semibold">Tutorial Bootstrap 5 — Halaman Komponen</p>
+        <small class="opacity-50"
+          >Nama: Ahmad Hakim Itsnaini | NIM: 253307054</small
+        >
+      </div>
+    </footer>
+
+    <div class="watermark">
+      <i class="bi bi-person-badge me-1"></i>
+      <strong>Nama:</strong> Ahmad Hakim Itsnaini &nbsp;|&nbsp;
+      <strong>NIM:</strong> 253307054
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function showToast() {
+        const toast = new bootstrap.Toast(document.getElementById("myToast"), {
+          delay: 3000,
+        });
+        toast.show();
+      }
+    </script>
+  </body>
+</html>
