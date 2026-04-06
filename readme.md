@@ -12,4 +12,4 @@ Tugas ini dikerjakan secara bertahap sesuai dengan modul praktikum perkuliahan u
 * **Institusi:** Politeknik Negeri Madiun
 
 ---
-*Dibuat untuk memenuhi tugas praktikum perkuliahan. Tahun Akademik 2025/2026.*
+*Tahun Akademik 2025/2026.*
