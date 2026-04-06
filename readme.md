@@ -15,4 +15,4 @@ Tugas ini dikerjakan secara bertahap sesuai dengan modul praktikum perkuliahan u
 
 ---
 
-_Dibuat untuk memenuhi tugas praktikum perkuliahan. Tahun Akademik 2025/2026._
+_Tahun Akademik 2025/2026._
