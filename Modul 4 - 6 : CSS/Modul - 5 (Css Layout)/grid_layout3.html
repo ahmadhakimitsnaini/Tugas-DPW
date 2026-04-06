@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Belajar Grid - Latihan 6</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-gap: 50px;
+        background-color: #2196f3;
+        grid-template-columns: auto auto auto auto;
+        padding: 10px;
+      }
+
+      .item1 {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        border: 2px solid red; /* Ditambahkan agar item 1 lebih mudah terlihat */
+
+        /* Skenario 1: Bentangan Baris (Row) */
+        /* Aktifkan kode di bawah ini untuk melihat Skenario 1 */
+        /* grid-row: 1 / 4; */
+
+        /* Skenario 2: Bentangan Kolom (Column) shorthand */
+        /* Hapus kode skenario 1, lalu aktifkan kode di bawah ini untuk melihat Skenario 2 */
+        grid-column: 1 / 4;
+      }
+
+      .item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      .kesimpulan {
+        background-color: #fff;
+        padding: 15px;
+        font-size: 16px;
+        grid-column: 1 / -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="item1">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+    </div>
+
+    <div class="kesimpulan">
+      <strong>Kesimpulan Lembar Kerja 6:</strong>
+      <ul>
+        <li>
+          <strong>Skenario 1:</strong> Saat
+          <code>grid-row: 1 / 4;</code> diaktifkan, Item 1 akan meregang secara
+          vertikal ke bawah, memakan ruang dari baris pertama hingga sebelum
+          garis baris keempat (memakan 3 baris).
+        </li>
+        <li>
+          <strong>Skenario 2:</strong> <code>grid-column: 1 / 4;</code> adalah
+          bentuk singkat (*shorthand*) dari kombinasi start dan end. Item 1 akan
+          meregang secara horizontal ke kanan, memakan ruang dari kolom pertama
+          hingga sebelum garis kolom keempat (memakan 3 kolom penuh).
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

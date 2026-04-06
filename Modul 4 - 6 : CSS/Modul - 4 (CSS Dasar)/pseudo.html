@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Pseudo-class selectors</title>
+    <style>
+      p {
+        display: none;
+        background-color: darkgray;
+        padding: 20px;
+      }
+      div:hover p {
+        /* :hover adalah CSS Pseudo Class */
+        display: block;
+      }
+
+      /* Jawaban untuk tugas link yang berubah warna saat di-hover */
+      a.tugas-link:hover {
+        color: orange;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      Letakkan kursor disini untuk melihat div element
+      <p>Saya adalah element p</p>
+    </div>
+    <br /><br />
+
+    <a href="#" class="tugas-link"
+      >Arahkan kursor ke link ini untuk melihat perubahan warnanya</a
+    >
+  </body>
+</html>

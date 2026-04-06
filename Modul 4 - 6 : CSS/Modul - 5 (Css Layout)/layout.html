@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Grid Layout Halaman</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-color: #e0e0e0;
+      }
+
+      /* Container utama menggunakan Grid */
+      .layout-container {
+        display: grid;
+        /* Mengatur rasio lebar kolom: 1 bagian kiri, 3 bagian tengah, 1 bagian kanan */
+        grid-template-columns: 1fr 3fr 1fr;
+        /* Memetakan area layout secara visual seperti menggambar kerangka */
+        grid-template-areas:
+          "header header header"
+          "menu main right"
+          "footer footer footer";
+        gap: 10px; /* Jarak antar kotak */
+        background-color: #2196f3; /* Warna biru sesuai contoh modul */
+        padding: 10px;
+      }
+
+      /* Menentukan penempatan masing-masing kotak berdasarkan nama areanya */
+      .header {
+        grid-area: header;
+      }
+      .menu {
+        grid-area: menu;
+      }
+      .main {
+        grid-area: main;
+      }
+      .right {
+        grid-area: right;
+      }
+      .footer {
+        grid-area: footer;
+      }
+
+      /* Styling visual untuk semua elemen di dalam grid */
+      .layout-container > div {
+        background-color: #e3f2fd; /* Biru sangat muda */
+        text-align: center;
+        padding: 40px 20px;
+        font-size: 24px;
+        color: #333;
+        border: 2px solid #64b5f6; /* Border biru muda */
+      }
+
+      /* Sedikit penyesuaian tinggi untuk Header dan Footer agar lebih proporsional */
+      .header,
+      .footer {
+        padding: 20px;
+      }
+
+      /* Area Main dibuat lebih tinggi untuk tempat konten utama */
+      .main {
+        min-height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout-container">
+      <div class="header">Header</div>
+      <div class="menu">Menu</div>
+      <div class="main">Main</div>
+      <div class="right">Right</div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>

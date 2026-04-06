@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Website CSS Saya</title>
+    <style>
+      /* Mengatur margin dan font dasar */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 10px;
+      }
+
+      /* Bagian Header */
+      .header {
+        background-color: #0000ff; /* Warna biru */
+        color: white;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      .header h1 {
+        color: #ffff00; /* Warna kuning */
+        margin: 0 0 5px 0;
+      }
+      .header p {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      /* Container untuk Menu dan Konten agar sejajar (kiri-kanan) */
+      .main-container {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      /* Bagian Sidebar (Menu) */
+      .sidebar {
+        width: 200px;
+        border: 2px dashed #999;
+        padding: 15px;
+      }
+      .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      .sidebar li {
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+      .sidebar a {
+        text-decoration: none;
+        color: black;
+      }
+      /* Efek saat link di-hover sesuai instruksi gambar */
+      .sidebar a:hover {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      /* Bagian Konten Utama */
+      .content {
+        flex: 1; /* Mengisi sisa ruang kosong */
+        text-align: center;
+        padding: 20px;
+      }
+      .content img {
+        width: 150px; /* Sesuaikan ukuran logo */
+        margin-bottom: 10px;
+      }
+      .content h2 {
+        font-size: 32px;
+        margin: 5px 0;
+      }
+      .content h3 {
+        font-weight: normal;
+        font-size: 22px;
+        margin: 5px 0 20px 0;
+      }
+      .content p.visi-misi {
+        color: #cc0000; /* Warna merah */
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.5;
+        font-size: 16px;
+      }
+
+      /* Bagian Footer */
+      .footer {
+        background-color: #b3d1ff; /* Biru muda */
+        text-align: right;
+        padding: 15px 20px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Halo CSS !</h1>
+      <p>Ini adalah website CSS saya</p>
+    </div>
+
+    <div class="main-container">
+      <div class="sidebar">
+        <ul>
+          <li><a href="#">Menu 1</a></li>
+          <li><a href="#">Menu 2</a></li>
+          <li><a href="#">Menu 3</a></li>
+          <li><a href="#">Menu 4</a></li>
+          <li><a href="#">Menu 5</a></li>
+          <li><a href="#">Menu 6</a></li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <img src="../../HTML/Modul-1/asset/Politeknik_Negeri_Madiun.png" />
+        <h2>TI</h2>
+        <h3>Politeknik Negeri Madiun</h3>
+        <p class="visi-misi">
+          Mewujudkan pendidikan tinggi vokasi dalam bidang<br />
+          Teknologi Informasi dan penerapannya yang berkualitas,<br />
+          inovatif dan berdaya saing Nasional.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">Ahmad Hakim Itsnaini | 253307054 | TI</div>
+  </body>
+</html>
