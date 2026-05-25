@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+.header {
+    background-color: #1a252f;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.header p { margin: 5px 0 0; font-size: 0.9em; opacity: 0.8; }
+.nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.nav a {
+    text-decoration: none;
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin: 0 5px;
+    font-size: 0.95em;
+}
+.nav a:hover { background-color: #1f618d; }
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 950px;
+    margin: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+table, th, td { border: 1px solid #ddd; }
+th, td { padding: 10px; text-align: left; }
+th { background-color: #1a252f; color: white; }
+tr:nth-child(even) { background-color: #f2f2f2; }
+.btn {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+.btn-edit  { background-color: #f39c12; color: black; }
+.btn-hapus { background-color: #e74c3c; }
+.btn-tambah { background-color: #27ae60; display: inline-block; margin-bottom: 15px; }
+.search-box { margin-bottom: 15px; text-align: right; }
+.search-box input[type="text"]   { padding: 8px; width: 250px; border: 1px solid #ccc; border-radius: 3px; }
+.search-box input[type="submit"] { padding: 8px 15px; background: #1a252f; color: white; border: none; cursor: pointer; border-radius: 3px; }
+.form-group { margin-bottom: 14px; }
+.form-group label { display: block; margin-bottom: 4px; font-weight: bold; }
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea {
+    width: 100%; padding: 8px; box-sizing: border-box;
+    border: 1px solid #ccc; border-radius: 3px;
+}
+.form-group textarea { height: 80px; }
+.alert-error { background: #fdecea; color: #c0392b; padding: 10px; border-radius: 4px; margin-bottom: 15px; }
+.no-data { text-align: center; color: #888; padding: 20px; }
