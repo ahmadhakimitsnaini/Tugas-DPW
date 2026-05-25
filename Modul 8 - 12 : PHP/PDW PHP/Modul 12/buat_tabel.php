@@ -12,13 +12,13 @@ $q = "CREATE TABLE t_login (
 )"; // [cite: 37, 38, 39, 40, 41, 42, 43]
 
 // Kirim kueri ke server basis data
-$hasil = $con->query($q); // [cite: 44, 45]
-
-// Periksa hasil pengiriman query
-if ($hasil === TRUE) { // [cite: 46, 47]
-    echo "Tabel t_login berhasil dibuat"; // [cite: 48]
-} else { // [cite: 49]
-    echo "Tabel gagal dibuat: " . $con->error; // [cite: 50]
+try {
+    $hasil = $con->query($q); // [cite: 44, 45]
+    if ($hasil === TRUE) { // [cite: 46, 47]
+        echo "Tabel t_login berhasil dibuat"; // [cite: 48]
+    }
+} catch (mysqli_sql_exception $e) {
+    echo "Tabel gagal dibuat: " . $e->getMessage();
 }
 
 // Menutup koneksi
